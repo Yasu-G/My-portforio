@@ -1,0 +1,371 @@
+
+/* reset css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  background-color: #000000;
+  font-size: calc(16*0.075vw);
+  text-align: center;
+}
+body {
+  position: relative;
+  width:100%;
+  margin: 0  auto;
+
+}
+
+/* ------------------------------------------------------------
+PC用
+----------------------------------------------------------------*/
+@media screen and (min-width: 768px){
+/* ***************************************************************** */
+
+/* フォント ***********************************************************/
+  h1 {
+    font-size: calc(80*0.075vw);
+    font-weight: bold;
+    color: #004870;
+  }
+  h2{
+    font-size: calc(60*0.075vw);
+    font-weight: bold;
+    color: #004870;
+  }
+  h3{
+    font-size: calc(32*0.075vw);
+    font-weight: bold;
+    color: #004870;
+  }
+  h4{
+    font-size: calc(20*0.075vw);
+  }
+  p{
+    font-size: calc(16*0.075vw);
+  }
+  .navi-link {
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  /* Navi *****************************+*******************************/
+  #logo {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #000000; /*縦、横、ぼかし、色 */
+    z-index: 1000;
+  }
+  #navi-pc {
+    position: fixed;
+    top: calc(1280/1920*80vw);
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+  }
+  #navi-sp{
+    display: none;
+  }
+
+  /* Navi-btn-all */
+  #navi-btn-all {
+    position: absolute;
+    width: 500px;
+    bottom: 7%;
+    right: 10%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+  #navi-page {
+    width: 420px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  .navi-page-home {
+    margin-left: 36px;
+  }
+
+  /* navi-btn */
+  .navi-btn {
+    position: relative;
+    width: 75px;
+    height: 75px;;
+    border-radius: 50%;
+    background-color: rgba(255,255,255, 0.5);
+    box-shadow: 2px 2px 2px #000000;
+  }
+  .navi-link{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+  }
+  #page-left-btn {
+    display: none;
+    width: calc(30px / 2 * tan(60deg));
+    clip-path: polygon(0 50%, 100% 0, 100% 100%); 
+    box-shadow: 2px 2px 2px #000000;
+    /* width: 30px;
+    border-radius: 50%; */
+
+    height: 30px;
+    background-color: rgba(255,255,255, 0.5);
+    margin-right: 10px;
+  }
+  #page-right-btn {
+    width: calc(30px / 2 * tan(60deg));
+    clip-path: polygon(0 0, 100% 50%, 0 100%); 
+    box-shadow: 2px 2px 2px #000000;
+    /* width: 30px;
+    border-radius: 50%; */
+
+    height: 30px;
+    background-color: rgba(255,255,255, 0.5);
+    margin-left: 10px;
+  }
+
+  .navi-btn:hover {
+    background-color: rgba(255,255,255, 1);
+  }
+  #page-left-btn:hover {
+    background-color: rgba(255,255,255, 1);
+  }
+  #page-right-btn:hover {
+    background-color: rgba(255,255,255, 1);
+  }
+
+  /* ホーム *****************************+*******************************/
+  #home {
+    /* display: none; */
+    position: absolute;
+    /* position: relative; */
+    top: 0;
+    width: 100%;
+    max-height: 100vh;
+    /*画像1920x1080px*/
+    overflow: hidden;
+    z-index: -1000;
+  }
+  #main-img {
+    width: 100%;
+  }
+  #main-img-sp {
+    display: none;
+  }
+  #main-img >img {
+    width: 100%;
+  }
+  #home-message {
+    position: absolute;
+    top:  30%;
+    right: 10%;
+    text-align: right;
+    line-height: 7em;
+  }  
+  #main-message-sp {
+    display: none;
+  }
+  .home-word {
+    color: #ffffff;
+    text-shadow: 1px 1px 0px #000000; /*縦、横、ぼかし、色 */
+  }
+
+  /* WORKS *****************************+*******************************/
+  #works {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: calc(1280/1920*100vw);
+    max-height: 100vh;
+    /* background-color: #5BC0F8; */
+    background-color: rgba(91,192,248,0.85);
+    overflow: hidden;
+    /* z-index: 1500; */
+  }
+  #works-message {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Slick */
+  #work-carsel {
+    position: relative;
+    top: 21%;
+    margin: 0 auto;
+    width: 90%;
+    height: 55%;
+    z-index: 3000;
+  }
+  .work-slider {
+    height: 100%;
+  }
+  .work-slider .slick-list,.slick-track{
+    height: 100%;
+    width: 100%;
+  }
+  .slick-img{
+    height: 100%;
+    width: 100%;
+  }
+  .slick-comment {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255,255,255, 0.5);
+  }
+  .slick-img h4 {
+    position: relative;
+  }
+  /* 中央以外のスライド */
+  .slick-img {
+    width: 100%;
+    height: auto;
+    opacity: .3;
+    transform: scale(1); 
+    transition: opacity .5s, transform .5s; 
+  }
+  .slick-img img{
+    width: 100%;
+  }
+  /* 中央のスライド */
+  .work-slider .slick-center {
+    opacity: 1; 
+    transform: scale(1.5); 
+    z-index: 1;
+  }
+
+
+  /* SKILL *****************************+*******************************/
+  #skill {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: calc(1280/1920*100vw);
+    max-height: 100vh;
+    /* background-color: #86E5FF; */
+    background-color: rgba(134,229,255,0.85);
+    position: relative;
+    overflow: hidden;
+    z-index: 500;
+  }
+  #logo-skill{
+    position: absolute;
+    top: 8%;
+    width: 100%;
+  }
+  #skill-table{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    top: 30%;
+    left: 2%;
+    margin: 0 auto;
+    width: 80%;
+    height: 54%;
+    justify-content: space-between;
+  }
+  .skill-cell {
+    display: flex;
+    width: calc(80%/3);
+  }
+  .skill-img {
+    width: 30%;
+  }
+  .skill-img >img{
+    width: 100%;
+  }
+  .skill-explain {
+    padding-left: 5%;
+    text-align: left;
+  }
+  /* ABOUT *****************************+*******************************/
+  #about {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: calc(1280/1920*100vw);
+    max-height: 100vh;
+    /* background-color: #004870; */
+    background-color: rgba(10,72,122,0.85);
+    overflow: hidden;
+    z-index: 500;
+  }
+  #logo-about{
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+  }
+  #about-table{
+    position: absolute;
+    top: 23%;
+    left: 13%;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: yellow; */
+  }
+  #about-message {
+    color: #ffffff;
+    width: 70%;
+    padding-left: 5%;
+    text-align: left;
+  }
+  #about-job{
+    margin-left: 5%;
+  }
+  #about-job-list{
+    font-size: calc(16*0.075vw);
+    margin-left: 10%;
+  }
+  #about-name {
+    width: 100%;
+    padding: 5%;
+    text-align: right;
+    font-family: "Xingkai TC";
+    font-style: right;
+    font-size: calc(38*0.075vw);
+  }
+  #about-img {
+    width: 30%;
+    color: #ffffff;
+  }
+  #about-img >img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  /* CONTACT *****************************+*******************************/
+  #contact {
+    display: none;
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    z-index: 500;
+  }
+  #contact-message {
+    position: absolute;
+    text-align: right;
+    top: 30%;
+    right: 10%;
+  }
+  #contact-img-sp {
+    display: none;
+  }
+  #contact-img img {
+    width: 100%;
+  }
+
+}
